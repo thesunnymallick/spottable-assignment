@@ -1,0 +1,22 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.light-theme {
+  --bg-main-color: #ffffff;
+  --bg-secondary-color: #fffafa;
+  --text-main-color: #292929;
+  --text-secondary-color: #454545;
+  --main-color: #6d00b3;
+  --table-hover: #ddd;
+}
+.dark-theme {
+  --bg-main-color: #292929;
+  --bg-secondary-color: #333333;
+  --text-main-color: #ffffff;
+  --text-secondary-color: #ececec;
+  --main-color: #6d00b3;
+  --table-hover: #1f1f1f;
+}

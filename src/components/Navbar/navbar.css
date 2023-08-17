@@ -1,0 +1,73 @@
+@import '../../App.css';
+.navabar {
+  background-color: var(--bg-main-color);
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--text-secondary-color);
+  display: flex;
+  justify-content: space-between;
+}
+.left_nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.left_nav h1 {
+  font-size: 2rem;
+  color: var(--text-main-color);
+  font-weight: 600;
+}
+.left_nav .search_field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search_field input {
+  width: 30vw;
+  padding: 0.8rem 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
+  color: var(--text-main-color);
+  border-radius: 10px;
+  background-color: var(--bg-secondary-color);
+}
+.search_field svg {
+  position: absolute;
+  right: 5%;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: var(--text-secondary-color);
+}
+.right_nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.right_nav .theme_icon svg {
+  font-size: 2rem;
+  color: var(--text-main-color);
+  cursor: pointer;
+}
+
+.right_nav .user_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right_nav .user_info img {
+  width: 3rem;
+  height: 3rem;
+  padding: 1px;
+  border-radius: 50%;
+  border: 1px solid var(--text-main-color);
+}
+
+.right_nav .user_info span {
+  font-size: 1.5rem;
+  color: var(--text-main-color);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}

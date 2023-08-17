@@ -1,0 +1,6 @@
+.landing_Page {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-secondary-color);
+  display: flex;
+}

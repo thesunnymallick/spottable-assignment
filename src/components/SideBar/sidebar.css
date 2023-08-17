@@ -1,0 +1,37 @@
+.sidebar {
+  width: 30%;
+  height: 87vh;
+  background-color: var(--bg-secondary-color);
+  border-right: 1px solid var(--text-secondary-color);
+}
+.addTask {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.addTask_btn {
+  margin-top: 1.3rem;
+  position: sticky;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0.7rem 0rem;
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+}
+.addTask_btn span {
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+}
+.addTask_btn svg {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
