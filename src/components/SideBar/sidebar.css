@@ -3,16 +3,23 @@
   height: 87vh;
   background-color: var(--bg-secondary-color);
   border-right: 1px solid var(--text-secondary-color);
+  overflow-y: auto;
 }
 .addTask {
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: sticky;
+  top: 0%;
+  background-color: var(--bg-main-color);
+  padding: 0.5rem 0rem;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .addTask_btn {
   margin-top: 1.3rem;
-  position: sticky;
+
   width: 90%;
   display: flex;
   align-items: center;

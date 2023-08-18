@@ -4,3 +4,17 @@
   background-color: var(--bg-secondary-color);
   display: flex;
 }
+.landing_page_aside {
+  display: flex;
+  width: 100%;
+}
+
+.allTask {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+  height: 85vh;
+  overflow-y: auto;
+}

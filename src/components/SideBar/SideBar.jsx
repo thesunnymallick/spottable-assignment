@@ -27,7 +27,7 @@ const SideBar = () => {
         <Modal
           isOpen={isModalOpen}
           onClose={closeModal}>
-          <Form />
+          <Form closeModal={closeModal} />
         </Modal>
       </div>
     </div>

@@ -1,0 +1,43 @@
+.tasklist_box {
+  width: 100%;
+  background-color: var(--bg-main-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tasklist_box:hover {
+  background-color: var(--bg-secondary-color);
+}
+.tasklist_title {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: normal;
+  color: var(--text-main-color);
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--text-secondary-color);
+  padding: 0.3rem 0.5rem;
+}
+.tasklist_desc {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  color: var(--text-main-color);
+}
+.tasklist_status {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 0.5rem;
+}
+.tasklist_status svg {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.tasklist_status span {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
