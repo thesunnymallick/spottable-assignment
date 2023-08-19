@@ -40,12 +40,15 @@
   .showTask {
     width: 65%;
   }
+  .landing_page_aside {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 700px) {
   .allTask {
-    width: 35%;
+    width: 65%;
   }
   .showTask {
-    width: 65%;
+    width: 100%;
   }
 }

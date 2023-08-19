@@ -5,8 +5,8 @@
 .task_content_head {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
 .task_content_left {
   display: flex;
@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  justify-content: flex-end;
 }
 .task_content_right button {
   display: inline-block;
