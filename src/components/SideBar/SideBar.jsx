@@ -1,37 +1,29 @@
-import { useState } from 'react';
 import './sidebar.css';
 import { AiOutlinePlus } from 'react-icons/ai';
-import Modal from '../Modal/Modal';
-import Form from '../Modal/Form';
 
-const SideBar = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
+import PropTypes from 'prop-types';
+const SideBar = ({ openModal, setIsUpdate, open }) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${open ? 'openSidebar' : ''}`}>
       <div className="addTask">
         <button
           className="addTask_btn"
-          onClick={openModal}>
+          onClick={() => {
+            openModal();
+            setIsUpdate(false);
+          }}>
           <AiOutlinePlus />
-          <span>CREATE NEW TASK</span>
+          <span>CREATE NEW TASK </span>
         </button>
-        <Modal
-          isOpen={isModalOpen}
-          onClose={closeModal}>
-          <Form closeModal={closeModal} />
-        </Modal>
       </div>
     </div>
   );
+};
+
+SideBar.propTypes = {
+  openModal: PropTypes.func.isRequired,
+  open: PropTypes.bool,
+  setIsUpdate: PropTypes.func.isRequired,
 };
 
 export default SideBar;

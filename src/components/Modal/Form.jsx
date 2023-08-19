@@ -1,38 +1,22 @@
-import { useDispatch } from 'react-redux';
 import CheckBox from './CheckBox';
 import './form.css';
-import { addTask } from '../../Redux/taskSlice';
-import { useState } from 'react';
-import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-const Form = ({ closeModal }) => {
-  const [title, setTitle] = useState('');
-  const [desc, setDesc] = useState('');
-  const [status, setStatus] = useState(false);
-
-  const dispatch = useDispatch();
-
-  const submitHandel = (e) => {
-    e.preventDefault();
-
-    const date = dayjs(new Date()).format('DD MMM YYYY');
-    const id = parseInt(Math.random() * 1000);
-    const taskContent = {
-      id,
-      title,
-      desc,
-      status,
-      timestamp: date,
-    };
-    console.log('submit handel', taskContent);
-    dispatch(addTask(taskContent));
-    closeModal();
-  };
-
+const Form = ({
+  title,
+  setTitle,
+  setDesc,
+  setStatus,
+  status,
+  desc,
+  submitHandel,
+  isUpdate,
+  updateHandel,
+  err,
+}) => {
   return (
     <form
       className="task_form"
-      onSubmit={submitHandel}>
+      onSubmit={isUpdate ? updateHandel : submitHandel}>
       <div className="form_heading">
         <h2>Add Task</h2>
       </div>
@@ -44,6 +28,7 @@ const Form = ({ closeModal }) => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
+          {err && <span className="errTittle">title should not empty</span>}
         </div>
         <div>
           <label> Description</label>
@@ -61,13 +46,22 @@ const Form = ({ closeModal }) => {
       <button
         type="submit"
         className="add-task-btn">
-        ADD TASK
+        {isUpdate ? 'Update task' : 'Add Task'}
       </button>
     </form>
   );
 };
 
 Form.propTypes = {
-  closeModal: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  setTitle: PropTypes.func.isRequired,
+  setDesc: PropTypes.func.isRequired,
+  setStatus: PropTypes.func.isRequired,
+  desc: PropTypes.string.isRequired,
+  status: PropTypes.bool.isRequired,
+  submitHandel: PropTypes.func.isRequired,
+  isUpdate: PropTypes.bool,
+  updateHandel: PropTypes.func,
+  err: PropTypes.bool,
 };
 export default Form;

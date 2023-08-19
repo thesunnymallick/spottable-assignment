@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './model.css';
+import { AiOutlineClose } from 'react-icons/ai';
 const Modal = ({ isOpen, onClose, children }) => {
   return (
     <div className={`modal ${isOpen ? 'open' : ''}`}>
@@ -8,7 +9,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         <button
           className="close-button"
           onClick={onClose}>
-          Close
+          <AiOutlineClose />
         </button>
       </div>
     </div>

@@ -17,29 +17,7 @@
   color: var(--text-main-color);
   font-weight: 600;
 }
-.left_nav .search_field {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.search_field input {
-  width: 30vw;
-  padding: 0.8rem 0.5rem;
-  font-size: 1rem;
-  outline: none;
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
-  color: var(--text-main-color);
-  border-radius: 10px;
-  background-color: var(--bg-secondary-color);
-}
-.search_field svg {
-  position: absolute;
-  right: 5%;
-  font-size: 1.5rem;
-  font-weight: 100;
-  color: var(--text-secondary-color);
-}
+
 .right_nav {
   display: flex;
   align-items: center;
@@ -70,4 +48,45 @@
   color: var(--text-main-color);
   text-transform: capitalize;
   letter-spacing: 1px;
+}
+
+.mobile-menu {
+  display: flex;
+  padding: 0rem 0.5rem;
+}
+.mobile-menu button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#mobile-menu-threeDot {
+  font-size: 2rem;
+  color: var(--text-main-color);
+  display: none;
+}
+#mobile-menu-close {
+  font-size: 2rem;
+  color: var(--text-main-color);
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .left_nav h1 {
+    font-size: 1.5rem;
+  }
+  .right_nav .theme_icon svg {
+    font-size: 1.7rem;
+  }
+  .right_nav .user_info img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .right_nav .user_info span {
+    font-size: 1.1rem;
+  }
+  #mobile-menu-threeDot {
+    display: block;
+  }
 }

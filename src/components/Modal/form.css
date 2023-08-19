@@ -36,6 +36,11 @@
   background-color: var(--bg-secondary-color);
   color: var(--text-main-color);
 }
+.form_content div label {
+  font-size: 0.9rem;
+  color: var(--text-secondary-color);
+  font-weight: bold;
+}
 .form_content div textarea {
   width: 80%;
   resize: none;
@@ -60,4 +65,24 @@
   padding: 0.5rem;
   border-radius: 7px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.errTittle {
+  font-size: 0.8rem;
+  color: red;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 750px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .form_content div input {
+    width: 100%;
+  }
+  .form_content div textarea {
+    width: 100%;
+  }
 }

@@ -13,10 +13,8 @@ const CheckBox = ({ status, setStatus }) => {
       }
       name="my-input"
       checked={status}
-      onChange={(value, event) => {
+      onChange={(value) => {
         setStatus(value);
-        console.log(event);
-        return alert(value);
       }}
       borderColor="#6d00b3"
       style={{ cursor: 'pointer' }}

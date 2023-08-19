@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 //FaTimesCircle
-const TaskList = ({ id, title, desc, status }) => {
+const TaskList = ({ id, title, status }) => {
   const navigate = useNavigate();
   const taskHandel = (id) => {
     console.log(id);
@@ -15,7 +15,6 @@ const TaskList = ({ id, title, desc, status }) => {
       className="tasklist_box"
       onClick={() => taskHandel(id)}>
       <h2 className="tasklist_title">{title}</h2>
-      <p className="tasklist_desc">{desc}</p>
       <div className="tasklist_status">
         {status != true ? (
           <>
@@ -37,7 +36,6 @@ TaskList.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   status: PropTypes.bool.isRequired,
-  desc: PropTypes.string,
 };
 
 export default TaskList;

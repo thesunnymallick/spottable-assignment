@@ -1,31 +1,25 @@
 .tasklist_box {
   width: 100%;
-  background-color: var(--bg-main-color);
   display: flex;
   flex-direction: column;
-  padding: 1rem 0rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  padding: 0.7rem 0rem;
+  border-bottom: 1px solid gray;
   cursor: pointer;
   transition: all 0.3s;
 }
 .tasklist_box:hover {
-  background-color: var(--bg-secondary-color);
+  background-color: var(--bg-main-color);
 }
 .tasklist_title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   line-height: normal;
   color: var(--text-main-color);
   text-transform: capitalize;
-  border-bottom: 1px solid var(--text-secondary-color);
-  padding: 0.3rem 0.5rem;
-}
-.tasklist_desc {
-  font-size: 0.9rem;
-  padding: 0.5rem;
-  color: var(--text-main-color);
+  padding: 0.3rem;
 }
 .tasklist_status {
+  margin-top: 0.5rem;
   align-self: flex-end;
   display: flex;
   align-items: center;
@@ -33,11 +27,27 @@
   margin-right: 0.5rem;
 }
 .tasklist_status svg {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 .tasklist_status span {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: capitalize;
+}
+
+@media only screen and (max-width: 700px) {
+  .tasklist_box {
+    padding: 0.5rem 0.2rem;
+  }
+  .tasklist_title {
+    font-size: 1rem;
+    padding: 0rem;
+  }
+  .tasklist_status svg {
+    font-size: 0.8rem;
+  }
+  .tasklist_status span {
+    font-size: 0.7rem;
+  }
 }

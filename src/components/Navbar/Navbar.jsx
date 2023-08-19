@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import { CiDark, CiLight } from 'react-icons/ci';
-import { BiSearch } from 'react-icons/bi';
-import './navbar.css';
+import { BiMenu } from 'react-icons/bi';
 
-const Navbar = () => {
+import './navbar.css';
+import PropTypes from 'prop-types';
+
+const Navbar = ({ toggleNavBar }) => {
   const [theme, setTheme] = useState('light-theme');
   const currentTheme = localStorage.getItem('theme');
-  console.log(theme);
+
+  // toggele dark and light theme
   const toggleTheme = () => {
     if (theme === 'light-theme') {
       setTheme('dark-theme');
@@ -25,13 +28,6 @@ const Navbar = () => {
     <div className="navabar">
       <div className="left_nav">
         <h1>Logo</h1>
-        <div className="search_field">
-          <input
-            type="text"
-            placeholder="Search Taks"
-          />
-          <BiSearch />
-        </div>
       </div>
       <div className="right_nav">
         {currentTheme === 'light-theme' ? (
@@ -52,9 +48,21 @@ const Navbar = () => {
             alt="userImg"
           />
         </div>
+
+        <div className="mobile-menu">
+          <button
+            id="mobile-menu-threeDot"
+            onClick={toggleNavBar}>
+            <BiMenu />
+          </button>
+        </div>
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  toggleNavBar: PropTypes.func.isRequired,
 };
 
 export default Navbar;

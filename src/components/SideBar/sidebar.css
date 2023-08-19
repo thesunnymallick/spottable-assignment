@@ -1,8 +1,7 @@
 .sidebar {
-  width: 30%;
+  width: 25%;
   height: 87vh;
-  background-color: var(--bg-secondary-color);
-  border-right: 1px solid var(--text-secondary-color);
+  background-color: var(--bg-main-color);
   overflow-y: auto;
 }
 .addTask {
@@ -11,7 +10,7 @@
   justify-content: center;
   position: sticky;
   top: 0%;
-  background-color: var(--bg-main-color);
+
   padding: 0.5rem 0rem;
 }
 ::-webkit-scrollbar {
@@ -19,13 +18,12 @@
 }
 .addTask_btn {
   margin-top: 1.3rem;
-
-  width: 90%;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  padding: 0.7rem 0rem;
+  gap: 5px;
+  padding: 0.5rem;
   cursor: pointer;
   background-color: var(--main-color);
   color: white;
@@ -34,11 +32,47 @@
   border-radius: 7px;
 }
 .addTask_btn span {
-  font-size: 1rem;
-  letter-spacing: 1.3px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
   font-weight: 700;
 }
 .addTask_btn svg {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 700;
+}
+@media only screen and (max-width: 900px) {
+  .sidebar {
+    width: 33%;
+  }
+  .addTask_btn {
+    width: 100%;
+    padding: 0.5rem 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: absolute;
+    top: 0%;
+    z-index: 10;
+    height: 100vh;
+    transition: all 0.3s;
+    padding: 1rem;
+    width: 40%;
+    background-color: var(--bg-secondary-color);
+  }
+  .openSidebar {
+    transform: translateX(0%);
+  }
+}
+@media only screen and (max-width: 550px) {
+  .sidebar {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .sidebar {
+    width: 70%;
+  }
 }
